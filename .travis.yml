@@ -4,7 +4,7 @@ node_js:
 install: 
   - npm install
 script: 
-  - npm run build
+  - hexo g
 after_script:
   - cd ./public
   - git config user.name "morisakigogogo"
