@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "12"
+install: 
+  - npm install
+script: 
+  - hexo g
+after_script:
+  - cd ./public
+  - git config user.name "morisakigogogo"
+  - git config user.email "hirose.morisaki@gmail.com"
+  - git init
+  - git add -A
+  - git commit -m"init"
+  - git push --force "https://github.com/morisakigogogo/wowow-blog.git" master:gh-pages
+branches:
+  only:
+    - master
